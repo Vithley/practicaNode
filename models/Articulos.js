@@ -12,8 +12,8 @@ const articuloSchema = mongoose.Schema({
 
 });
 
-articuloSchema.statics.lista = function(filtro, skip, limit, fields, sort) {
-    const query = Articulo.find(filtro);
+articuloSchema.statics.lista = function(filter, skip, limit, fields, sort) {
+    const query = Articulo.find(filter);
     query.skip(skip);
     query.limit(limit);
     query.select(fields);
