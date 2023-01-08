@@ -6,6 +6,12 @@ Deploy:
 npm install
 ````
 
+Load initial data to database
+```sh
+npm run init-db
+```
+
+
 Start the application with:
 
 ```sh
