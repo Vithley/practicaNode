@@ -12,6 +12,15 @@ const articuloSchema = mongoose.Schema({
 
 });
 
+articuloSchema.statics.lista = function(filtro, skip, limit, fields, sort) {
+    const query = Articulo.find(filtro);
+    query.skip(skip);
+    query.limit(limit);
+    query.select(fields);
+    query.sort(sort);
+    return query.exec();
+}
+
 
 // Crear el modelo
 const Articulo = mongoose.model('Articulo', articuloSchema);
